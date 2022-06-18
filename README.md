@@ -1,5 +1,5 @@
 <h3 align="center">Car Inventory App</h3>
-<p>Preview </p>
+<p>Description</p>
 Car inventory app is a Laravel portal where inventory of cars can be maintained and users can register and then add or update cars along with their Categories
 
 <p>Instalation Instructions</p>
