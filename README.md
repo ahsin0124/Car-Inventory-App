@@ -4,8 +4,11 @@ Car inventory app is a Laravel portal where inventory of cars can be maintained 
 
 <p>Instalation Instructions</p>
 - clone App from https://github.com/ahsin0124/Car-Inventory-App.git<br>
-- Run command composer update 
-- Run Command php artisan php artisan jwt:secret 
-- Add .env file in main folder 
-- Add your datanase credentials in .env file
-- Add your mail credentials in .env to receive mail notifications 
+- Run command composer update <br>
+
+- Add .env file in main folder <br>
+- Add your datanase credentials in .env file<br>
+- Add your mail credentials in .env to receive mail notifications <br>
+- Run php artisan migrate to create tables in database <br>
+- Run Command php artisan php artisan jwt:secret <br>
+- Run php artisan serve 
