@@ -144,15 +144,20 @@ class CarController extends Controller
      *
      * @param  \App\Models\Car  $Car
      */
-    
+
     public function destroy($id)
     {
         $validator = Validator::make(['id' => $id], [
-            'id' => 'required|exists:car_categories,id'
+            'id' => 'required|exists:cars,id'
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['error' => $validator->messages()], 200);
+            if ($request->wantsJson()) {
+                return response()->json(['error' => $validator->messages()], 200);
+            } else {
+                return redirect()->back()
+                ->withErrors($validator->messages());
+            }
         }
 
         $car = Car::find($id);
